@@ -2,74 +2,96 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Birthday Decryption 🎉</title>
+  <title>Happy Birthday Mawa🎉</title>
   <style>
     body {
-      background: linear-gradient(135deg, #0f172a, #020617);
-      color: #e5e7eb;
-      font-family: monospace;
+      margin: 0;
+      height: 100vh;
+      font-family: "Segoe UI", sans-serif;
+      background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: 0;
+      color: #ffffff;
       text-align: center;
+      overflow: hidden;
+      position: relative;
     }
-    .box {
-      max-width: 650px;
-      padding: 30px;
-      border: 1px solid #334155;
-      border-radius: 10px;
-      background: rgba(15, 23, 42, 0.8);
+
+    /* Background text */
+    .bg-text {
+      position: absolute;
+      font-size: 140px;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.05);
+      letter-spacing: 12px;
+      text-transform: uppercase;
+      user-select: none;
     }
-    button {
-      margin-top: 20px;
-      padding: 12px 25px;
-      font-size: 16px;
-      cursor: pointer;
-      background: #22c55e;
-      border: none;
-      border-radius: 6px;
-      color: #022c22;
-      font-weight: bold;
+
+    .card {
+      max-width: 750px;
+      padding: 40px;
+      border-radius: 16px;
+      background: rgba(0, 0, 0, 0.6);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+      z-index: 1;
     }
-    .hidden {
-      display: none;
-      margin-top: 25px;
+
+    h1 {
+      color: #facc15;
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+
+    p {
       font-size: 18px;
-      line-height: 1.7;
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+
+    .emoji {
+      font-size: 26px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .bg-text {
+        font-size: 80px;
+        letter-spacing: 6px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h2>🔐 Secure Birthday Message</h2>
-    <p>Recipient verified: <strong>Mawa</strong></p>
 
-    <button onclick="reveal()">Decrypt Message</button>
+  <div class="bg-text">PLAYBOY</div>
 
-    <div id="msg" class="hidden">
-      🎉 <strong>Happy Birthday Mawa!</strong> 🎉
-      <br><br>
+  <div class="card">
+    <h1>🎉 Happy Birthday Mawa....!!!</h1>
+
+    <p>
       On this special day, I just want you to know how much you mean to me.
       You’ve been my constant source of strength, laughter, and comfort,
       and I’m so grateful for every moment we’ve shared.
-      <br><br>
+    </p>
+
+    <p>
       May this year bring you endless joy, new adventures,
       and the kind of happiness that lights up your soul.
-      <br><br>
+    </p>
+
+    <p>
       You deserve nothing less than the very best,
-      today and always. 💖
-      <br><br>
-      <strong>— Message successfully delivered ❤️</strong>
-    </div>
+      today and always.
+    </p>
+
+    <div class="emoji">💖🎂</div>
   </div>
 
-  <script>
-    function reveal() {
-      document.querySelector("h2").innerText = "✅ Decryption Complete";
-      document.getElementById("msg").classList.remove("hidden");
-    }
-  </script>
 </body>
 </html>
