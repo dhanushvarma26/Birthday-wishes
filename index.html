@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Decryption 🎉</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #e5e7eb;
+      font-family: monospace;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .box {
+      max-width: 650px;
+      padding: 30px;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      background: rgba(15, 23, 42, 0.8);
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #22c55e;
+      border: none;
+      border-radius: 6px;
+      color: #022c22;
+      font-weight: bold;
+    }
+    .hidden {
+      display: none;
+      margin-top: 25px;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>🔐 Secure Birthday Message</h2>
+    <p>Recipient verified: <strong>Mawa</strong></p>
+
+    <button onclick="reveal()">Decrypt Message</button>
+
+    <div id="msg" class="hidden">
+      🎉 <strong>Happy Birthday Mawa!</strong> 🎉
+      <br><br>
+      On this special day, I just want you to know how much you mean to me.
+      You’ve been my constant source of strength, laughter, and comfort,
+      and I’m so grateful for every moment we’ve shared.
+      <br><br>
+      May this year bring you endless joy, new adventures,
+      and the kind of happiness that lights up your soul.
+      <br><br>
+      You deserve nothing less than the very best,
+      today and always. 💖
+      <br><br>
+      <strong>— Message successfully delivered ❤️</strong>
+    </div>
+  </div>
+
+  <script>
+    function reveal() {
+      document.querySelector("h2").innerText = "✅ Decryption Complete";
+      document.getElementById("msg").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
